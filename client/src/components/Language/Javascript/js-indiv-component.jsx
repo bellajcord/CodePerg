@@ -1,0 +1,1 @@
+//individual show page for each video will contiain edit and delete button
