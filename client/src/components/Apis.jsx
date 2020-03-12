@@ -39,11 +39,17 @@ export default class Apis extends Component {
   };
 
 //form
-  handleNewFormChange = evt => {
-    const newVideo = {...this.state.newVideo};
-    newVideo[evt.target.title] = evt.target.value;
-    this.setState({newVideo});
-  };
+  // handleNewFormChange = evt => {
+  //   const newVideo = {...this.state.newVideo};
+  //   newVideo[evt.target.title] = evt.target.value;
+  //   this.setState({newVideo});
+  // };
+  handleNewFormChange = (event) => {
+    const attribute = event.target.name
+    const newVideo = { ...this.state.newVideo }
+    newVideo[attribute] = event.target.value
+    this.setState({ newVideo: newVideo })
+  }
 
   //form
   handleSubmit = evt => {
@@ -59,6 +65,7 @@ export default class Apis extends Component {
       });
     });
     this.componentDidMount()
+    
   }
   
   render() {
@@ -74,10 +81,7 @@ export default class Apis extends Component {
     return (
       <div className='video-display' >
       <h1>Api Videos</h1>
-      <SearchBox 
-            placeholder="search videos"
-            hanldeChange = {this.handleChange }
-            />
+      
         <VideoList apiVideos={this.state.apiVideos}></VideoList>
      
          <form onSubmit={this.handleSubmit} >
