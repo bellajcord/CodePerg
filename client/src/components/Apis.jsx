@@ -38,12 +38,7 @@ export default class Apis extends Component {
     this.setState({ searchField: e.target.value});
   };
 
-//form
-  // handleNewFormChange = evt => {
-  //   const newVideo = {...this.state.newVideo};
-  //   newVideo[evt.target.title] = evt.target.value;
-  //   this.setState({newVideo});
-  // };
+
   handleNewFormChange = (event) => {
     const attribute = event.target.name
     const newVideo = { ...this.state.newVideo }
