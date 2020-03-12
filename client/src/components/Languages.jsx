@@ -1,32 +1,46 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import axios from 'axios';
+import {VideoList} from './Language/lang-list-component'
+import {SearchBox} from './Search-box'
 
 
-export default class Lang extends Component {
+export default class Languages extends Component {
+  constructor(){
+    super();
+
+    this.state = {
+      langVideos: [],
+      searchField: '',
+    };
+  }
+
+  componentDidMount = () => {
+    axios.get('/api/language').then(res => {
+        this.setState({langVideos: res.data})
+    })
+  }
+
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value});
+  }
   
-    render() {
-        return (
-          <div>
-            <div className="home-container">
-              <div>
-                <h1 className="home-header">Code Pergatory</h1>
-              </div>
-              <div>
-                <h2 className="home-header2">What do you want to learn today?</h2>
-              </div>
-              <div>
-                <a href="/Javascript">
-                  <button className="btn-router">JavaScript</button>
-                </a>
-                <a href="/Libraries">
-                    <button className="btn-router">HTML</button>
-                </a>
-                <a href="/API">
-                    <button className="btn-router">CSS</button>
-                </a>
-              </div>
-            </div>
-            <div className="footer"></div>
-          </div>
-        );
-      }
+  
+  render() {
+    const {langVideos, searchField} = this.state;
+    const filteredVideos = langVideos.filter( langVideo => 
+      langVideo.name.toLowerCase().includes(searchField.toLowerCase())
+      );
+
+    return (
+      <div className='video-display' >
+      <h1>Language Videos</h1>
+      <SearchBox 
+            placeholder="search videos"
+            hanldeChange = {this.handleChange }
+            />
+        <VideoList langVideos={filteredVideos}></VideoList>
+        
+      </div>
+    )
+  }
 }

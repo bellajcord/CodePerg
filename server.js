@@ -16,8 +16,9 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { templateRouter } = require('./controllers/template.js')
-
+const { langRouter } = require('./controllers/langVideo')
+const {apiRouter} = require('./controllers/apiVideo')
+const {libRouter} = require('./controllers/libVideo')
 
 /* Step 3
  *
@@ -49,7 +50,9 @@ app.use(express.static(`${__dirname}/client/build`))
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/api/helloworld', templateRouter)
+app.use('/api/language', langRouter)
+app.use('/api/apivideo', apiRouter) 
+app.use('/api/libraries', libRouter)
 
 /* Step 5
  *
