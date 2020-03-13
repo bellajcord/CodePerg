@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import Languages from './components/Languages';
 import Apis from './components/Apis';
 import Libraries from './components/Libraries'
+
+
 
 
 function App() {
