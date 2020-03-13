@@ -5,14 +5,24 @@ import {SearchBox} from './Search-box'
 
 
 export default class Languages extends Component {
-  constructor(){
-    super();
-
-    this.state = {
+  
+state = {
       langVideos: [],
       searchField: '',
+      langVideo: {
+        name:"",
+        link: "",
+        description: "",
+        language: "",
+      },
+      newVideo: {
+        name: "",
+        link: "",
+        description: "",
+        language: "",
+      }
     };
-  }
+  
 
   componentDidMount = () => {
     axios.get('/api/language').then(res => {

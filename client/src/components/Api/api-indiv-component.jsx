@@ -11,7 +11,7 @@ export const IndivApiVideo = props => {
         src={`https://www.youtube.com/embed/${props.apiVideo.link} `}
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowfullscreen="allowfullscreen"
       ></iframe>
 
       <h2>{props.apiVideo.title} </h2>
