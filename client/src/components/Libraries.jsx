@@ -5,14 +5,24 @@ import {SearchBox} from './Search-box'
 
 
 export default class Libraries extends Component {
-  constructor(){
-    super();
-
-    this.state = {
+  
+state = {
       libVideos: [],
       searchField: '',
+      libVideo: {
+        title: '',
+        link: '',
+        description: '',
+        library:'',
+      },
+      newVideo: {
+        title: '',
+        link:'',
+        description:'',
+        library:'',
+      }
     };
-  }
+  
 
   componentDidMount = () => {
     axios.get('/api/libraries').then(res => {
