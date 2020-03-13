@@ -34,16 +34,16 @@ state = {
    // this.setState({ searchField: e.target.value});
   //}
   
-  handleNewFormChange = (e) => {
-    const attribute = e.target.name
+  handleNewFormChange = (event) => {
+    const attribute = event.target.name
     const newVideo = {...this.state.newVideo}
-    newVideo[attribute] = e.target.value
+    newVideo[attribute] = event.target.value
     this.setState({newVideo: newVideo})
   }
 
   handleSubmit = evt => {
     evt.preventDefault();
-    axios.post("/api/languages", this.state.newVideo).then(()=>{
+    axios.post("/api/language", this.state.newVideo).then(()=>{
       this.setState({
         newVideo: {
           name: "",
@@ -74,7 +74,7 @@ state = {
             <label>Name</label>
             <input
               type="text"
-              name="title"
+              name="name"
               onChange={this.handleNewFormChange}
               />
           <label>Description</label>     
