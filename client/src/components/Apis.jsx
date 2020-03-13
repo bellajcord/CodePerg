@@ -34,9 +34,9 @@ export default class Apis extends Component {
 
   
 
-  handleChange = (e) => {
-    this.setState({ searchField: e.target.value});
-  };
+ // handleChange = (e) => {
+ //   this.setState({ searchField: e.target.value});
+ // };
 
 
   handleNewFormChange = (event) => {

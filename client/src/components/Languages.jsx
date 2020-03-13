@@ -30,10 +30,16 @@ state = {
     })
   }
 
-  handleChange = (e) => {
-    this.setState({ searchField: e.target.value});
-  }
+  //handleChange = (e) => {
+   // this.setState({ searchField: e.target.value});
+  //}
   
+  handleNewFormChange = (e) => {
+    const attribute = e.target.name
+    const newVideo = {...this.state.newVideo}
+    newVideo[attribute] = e.target.value
+    this.setState({newVideo: newVideo})
+  }
   
   render() {
     const {langVideos, searchField} = this.state;
