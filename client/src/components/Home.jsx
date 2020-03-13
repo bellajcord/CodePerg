@@ -1,6 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 // will contain nav bar, and level selector buttons that route to subjects
 import React, { Component } from "react";
 import '../assets/bootstrap/css/bootstrap.min.css'
+import Background from '../assets/img/masthead.jpg'
+
+
 
 export default class Home extends Component {
   render() {
@@ -28,7 +32,21 @@ export default class Home extends Component {
         </div>
       </nav>
 
-      
+      <header className="masthead" style={{  
+        backgroundImage: "url(masthead.jpg" + ")",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }}>
+     
+        <div className='container'>
+          <div className='intro-text'>
+            <div className='intro-lead-in'>
+                <h1>Welcome To Code Pergatory!</h1>
+            </div>
+          </div>
+        </div>
+      </header>
     
         <div className="home-container">
           <div>
