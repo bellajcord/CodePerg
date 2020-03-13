@@ -30,16 +30,23 @@ state = {
     })
   }
 
-  handleChange = (e) => {
-    this.setState({ searchField: e.target.value});
+  //handleChange = (e) => {
+    //this.setState({ searchField: e.target.value});
+  //}
+
+  handleNewFormChange = (event) => {
+    const attribute = event.target.name
+    const newVideo = { ...this.state.newVideo }
+    newVideo[attribute] = event.target.value
+    this.setState({ newVideo: newVideo })
   }
   
   
   render() {
-    const {libVideos, searchField} = this.state;
-    const filteredVideos = libVideos.filter( libVideo => 
-      libVideo.title.toLowerCase().includes(searchField.toLowerCase())
-      );
+    // const {libVideos, searchField} = this.state;
+    // const filteredVideos = libVideos.filter( libVideo => 
+    //   libVideo.title.toLowerCase().includes(searchField.toLowerCase())
+    //   );
 
     return (
       <div className='video-display' >
