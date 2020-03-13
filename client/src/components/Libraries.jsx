@@ -66,12 +66,44 @@ state = {
     return (
       <div className='video-display' >
       <h1>Library Videos</h1>
-      <SearchBox 
-            placeholder="search videos"
-            hanldeChange = {this.handleChange }
-            />
-        <VideoList libVideos={filteredVideos}></VideoList>
+      
+        <VideoList libVideos={this.state.libVideos}></VideoList>
         
+        <form onSubmit={this.handleSubmit} >
+        <label>New Video</label>
+        <br/>
+        <label>Title</label>
+        <input
+          type="text"
+          name="title"
+          onChange={this.handleNewFormChange}
+          //value= {this.state.newVideo.title}
+          />
+          <label>Description</label>
+          <input  
+            type="text"
+            name="description"
+            onChange={this.handleNewFormChange}
+            //value= {this.state.newVideo.description}
+            />
+            <label>Library</label>
+            <input  
+            type="text"
+            name="library"
+            onChange={this.handleNewFormChange}
+            //value= {this.state.newVideo.topic}
+            />
+            <label>Link</label>
+            <input  
+            type="text"
+            name="link"
+            onChange={this.handleNewFormChange}
+            //value= {this.state.newVideo.link}
+           />
+           <input type="submit" value="Add New Video" />
+      </form>
+   
+
       </div>
     )
   }
