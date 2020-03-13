@@ -34,9 +34,9 @@ export default class Apis extends Component {
 
   
 
- // handleChange = (e) => {
- //   this.setState({ searchField: e.target.value});
- // };
+ handleChange = (e) => {
+   this.setState({ searchField: e.target.value});
+ };
 
 
   handleNewFormChange = (event) => {
@@ -64,20 +64,20 @@ export default class Apis extends Component {
   }
   
   render() {
-    //const {apiVideos, searchField} = this.state;
-    //const filteredVideos = apiVideos.filter( apiVideo => {
-      // apiVideo.title.toLowerCase().includes(searchField.toLowerCase())
-      // console.log(apiVideo.title.toUpperCase())
-      //console.log(searchField)
-    
-      
-    //  );
+    const {apiVideos, searchField} = this.state;
+    const filteredVideos = apiVideos.filter( apiVideo => 
+      apiVideo.title.toLowerCase().includes(searchField.toLowerCase())
+      );
 
     return (
       <div className='video-display' >
       <h1>Api Videos</h1>
-      
-        <VideoList apiVideos={this.state.apiVideos}></VideoList>
+      <SearchBox 
+            placeholder="search videos"
+            hanldeChange = {this.handleChange }
+            />
+
+        <VideoList apiVideos={filteredVideos}></VideoList>
      
          <form onSubmit={this.handleSubmit} >
            <label>New Video</label>

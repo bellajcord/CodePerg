@@ -30,9 +30,9 @@ state = {
     })
   }
 
-  //handleChange = (e) => {
-    //this.setState({ searchField: e.target.value});
-  //}
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value});
+  }
 
   handleNewFormChange = (event) => {
     const attribute = event.target.name
@@ -56,18 +56,32 @@ state = {
     this.componentDidMount()
     
   }
+
+  deleteButtonAction = () => {
+    axios
+      .delete(
+        `/api/libraries/${this.state.match.params.libVideoId}`,
+        this.state.libVideos
+      )
+      
+    this.componentDidMount();
+      
+  };
   
   render() {
-    // const {libVideos, searchField} = this.state;
-    // const filteredVideos = libVideos.filter( libVideo => 
-    //   libVideo.title.toLowerCase().includes(searchField.toLowerCase())
-    //   );
+    const {libVideos, searchField} = this.state;
+    const filteredVideos = libVideos.filter( libVideo => 
+      libVideo.title.toLowerCase().includes(searchField.toLowerCase())
+      );
 
     return (
       <div className='video-display' >
       <h1>Library Videos</h1>
-      
-        <VideoList libVideos={this.state.libVideos}></VideoList>
+      <SearchBox 
+            placeholder="search videos"
+            hanldeChange = {this.handleChange }
+            />
+        <VideoList libVideos={filteredVideos}></VideoList>
         
         <form onSubmit={this.handleSubmit} >
         <label>New Video</label>

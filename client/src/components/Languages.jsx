@@ -30,9 +30,9 @@ state = {
     })
   }
 
-  //handleChange = (e) => {
-   // this.setState({ searchField: e.target.value});
-  //}
+  handleChange = (e) => {
+   this.setState({ searchField: e.target.value});
+  }
   
   handleNewFormChange = (event) => {
     const attribute = event.target.name
@@ -57,16 +57,19 @@ state = {
   }
   
   render() {
-   // const {langVideos, searchField} = this.state;
-   // const filteredVideos = langVideos.filter( langVideo => 
-    //  langVideo.name.toLowerCase().includes(searchField.toLowerCase())
-     // );
+   const {langVideos, searchField} = this.state;
+   const filteredVideos = langVideos.filter( langVideo => 
+     langVideo.name.toLowerCase().includes(searchField.toLowerCase())
+     );
 
     return (
       <div className='video-display' >
       <h1>Language Videos</h1>
-      
-        <VideoList langVideos={this.state.langVideos}></VideoList>
+      <SearchBox 
+            placeholder="search videos"
+            hanldeChange = {this.handleChange }
+            />
+        <VideoList langVideos={filteredVideos}></VideoList>
         
         <form onSubmit={this.handleSubmit} >
           <label>New Video</label>
