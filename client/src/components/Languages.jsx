@@ -40,12 +40,27 @@ state = {
     newVideo[attribute] = e.target.value
     this.setState({newVideo: newVideo})
   }
+
+  handleSubmit = evt => {
+    evt.preventDefault();
+    axios.post("/api/languages", this.state.newVideo).then(()=>{
+      this.setState({
+        newVideo: {
+          name: "",
+          link:"",
+          description: "",
+          language: ""
+        }
+      });
+    });
+    this.componentDidMount()
+  }
   
   render() {
-    const {langVideos, searchField} = this.state;
-    const filteredVideos = langVideos.filter( langVideo => 
-      langVideo.name.toLowerCase().includes(searchField.toLowerCase())
-      );
+   // const {langVideos, searchField} = this.state;
+   // const filteredVideos = langVideos.filter( langVideo => 
+    //  langVideo.name.toLowerCase().includes(searchField.toLowerCase())
+     // );
 
     return (
       <div className='video-display' >
