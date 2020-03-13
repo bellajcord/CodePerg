@@ -3,7 +3,8 @@
 import React from 'react';
 import {IndivLangVideo} from './lang-indiv-component';
 
-export const VideoList = props => (
+export const VideoList = props => {
+  return (
     <div className='video-list'>
     
      {
@@ -12,5 +13,5 @@ export const VideoList = props => (
           ))
         }
     </div>
-
-)    
+  );
+      };   
