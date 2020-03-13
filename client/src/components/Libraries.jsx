@@ -41,6 +41,21 @@ state = {
     this.setState({ newVideo: newVideo })
   }
   
+  handleSubmit = evt => {
+    evt.preventDefault();
+    axios.post("/api/libraries", this.state.newVideo).then(()=>{
+      this.setState({
+        newVideo: {
+          title:"",
+          link:"",
+          description: "",
+          topic:"",
+        }
+      });
+    });
+    this.componentDidMount()
+    
+  }
   
   render() {
     // const {libVideos, searchField} = this.state;
