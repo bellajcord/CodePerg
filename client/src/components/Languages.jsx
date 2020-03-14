@@ -86,16 +86,21 @@ state = {
           </div>
         </div>
       </nav>
+
       <div className='video-display' >
       <h1>Language Videos</h1>
+      <br/>
       <SearchBox 
             placeholder="search videos"
             hanldeChange = {this.handleChange }
             />
+            <br/>
+      <hr/>
+      <br/>
         <VideoList langVideos={filteredVideos}></VideoList>
-        
+        <section className="add-new-form">
         <form onSubmit={this.handleSubmit} >
-          <label>New Video</label>
+          <label className='newform-label'>New Video</label>
             <br/>
             <label>Name</label>
             <input
@@ -103,26 +108,44 @@ state = {
               name="name"
               onChange={this.handleNewFormChange}
               />
+              <br/>
           <label>Description</label>     
             <input  
               type='text'
               name='description'
               onChange={this.handleNewFormChange}
               />
+              <br/>
             <label>Language</label>
             <input
               type='text'
               name='language'
               onChange={this.handleNewFormChange}
               />
+              <br/>
             <label>Link</label>
             <input
               type="text"
               name="link"
               onChange={this.handleNewFormChange}
               />
-              <input type="submit" value="Add New Video"/>   
+              <br/>
+              <br/>
+              <input className="new-video-button" type="submit" value="Add New Video"/>   
         </form>
+        </section>
+        <footer>
+        <section className="secondary-footer">
+        <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <span className="copyright">Copyright© codePerg 2020</span>
+          </div>
+        </div>
+      </div>
+      </section>
+        </footer>
+
       </div>
       </div>
     )
