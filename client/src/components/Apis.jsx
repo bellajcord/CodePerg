@@ -146,6 +146,18 @@ export default class Apis extends Component {
          </form>
       </section>
 
+      <footer>
+      <section className="secondary-footer">
+      <div className="container">
+      <div className="row">
+        <div className="col-md-4">
+          <span className="copyright">Copyright© codePerg 2020</span>
+        </div>
+      </div>
+    </div>
+    </section>
+      </footer>
+
       </div>
       </div>
     )

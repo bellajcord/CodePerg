@@ -1,3 +1,7 @@
+div {
+    font-family: Montserrat;
+}
+
 .video-list {
     width: 98vw;
     margin-top: 40px;
@@ -14,6 +18,9 @@
 
 h1 {
     text-align: center;
+    font-family: Montserrat;
+    font-size: 60px;
+    color: #343A40;
 }
 
 .filter-unit {
@@ -46,6 +53,8 @@ hr {
     backface-visibility: hidden;
     transform: translate();
     transition: transform 0.25 ease-out;
+    text-align: center;
+    align-items: center;
 }
 
 .indiv-video-container:hover {
@@ -85,4 +94,12 @@ label {
     background-color: #fed136;
     color:#343A40;
     padding: 1em;
+}
+
+footer .secondary-footer {
+    background-color: #343A40;
+    padding: 60px;
+    color: #fed136;
+    position: relative;
+    
 }
