@@ -105,7 +105,7 @@ export default class Apis extends Component {
       <hr/>
       <br/>
         <VideoList apiVideos={filteredVideos}></VideoList>
-     
+     <section className="add-new-form">
          <form onSubmit={this.handleSubmit} >
            <label>New Video</label>
            <br/>
@@ -139,7 +139,7 @@ export default class Apis extends Component {
               />
               <input type="submit" value="Add New Video" />
          </form>
-      
+      </section>
 
       </div>
       </div>
