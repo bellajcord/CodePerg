@@ -70,13 +70,40 @@ export default class Apis extends Component {
       );
 
     return (
+      <div>
+
+      <nav id="mainNav" className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark">
+        <div className="container">
+          <a className="navbar-brand" href="/">codePerg</a>
+          <button className="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse" type="button" data-toggle="collapse" aria-controls="false" aria-label="Toggle navigation" >
+            <i className="fa fa-bars"></i>
+          </button>
+          <div id="navbarResponsive" className="collapse navbar-collapse">
+            <ul className="nav navbar-nav ml-auto text-uppercase">
+              <li className="nav-item" role="presentation">
+                <a className="nav-link js-scroll-trigger" href="/Libraries">Libraries</a>
+              </li>
+              <li className="nav-item" role="presentation">
+                <a className="nav-link js-scroll-trigger" href="/Languages">Languages</a>
+              </li>
+              <li className="nav-item" role="presentation">
+                <a className="nav-link js-scroll-trigger" href="/Apis">API's</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <div className='video-display' >
       <h1>Api Videos</h1>
+      <br/>
       <SearchBox 
             placeholder="search videos"
             hanldeChange = {this.handleChange }
             />
-
+      <br/>
+      <hr/>
+      <br/>
         <VideoList apiVideos={filteredVideos}></VideoList>
      
          <form onSubmit={this.handleSubmit} >
@@ -114,6 +141,7 @@ export default class Apis extends Component {
          </form>
       
 
+      </div>
       </div>
     )
   }

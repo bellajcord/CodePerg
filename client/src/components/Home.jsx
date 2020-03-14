@@ -42,32 +42,28 @@ export default class Home extends Component {
         <div className='container'>
           <div className='intro-text'>
             <div className='intro-lead-in'>
-                <h1>Welcome To Code Pergatory!</h1>
+                <h1>Welcome To Code Pergatory.</h1>
+            </div>
+            <div className="intro-heading text-uppercase">
             </div>
           </div>
         </div>
       </header>
     
-        <div className="home-container">
-          <div>
-            <h1 className="home-header">Code Pergatory</h1>
-          
-            <h2 className="home-header2">What do you want to learn today?</h2>
-          </div>
-          <div>
-            <a href="/Languages">
-              <button className="btn-router">Language</button>
-            </a>
-            <a href="/Libraries">
-                <button className="btn-router">Libraries</button>
-            </a>
-            <a href="/Apis">
-                <button className="btn-router">API's</button>
-            </a>
+      <footer>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <span className="copyright">Copyright© codePerg 2020</span>
+            </div>
           </div>
         </div>
-        <div className="footer"></div>
-      </div>
+      </footer>
+
+</div>
+
+
+       
     );
   }
 }

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { IndivApiVideo } from "./api-indiv-component";
+import '../topics-styles.css';
 
 export const VideoList = props => {
   return (
