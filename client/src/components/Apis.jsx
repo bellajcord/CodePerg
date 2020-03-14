@@ -107,7 +107,7 @@ export default class Apis extends Component {
         <VideoList apiVideos={filteredVideos}></VideoList>
      <section className="add-new-form">
          <form onSubmit={this.handleSubmit} >
-           <label>New Video</label>
+           <label className='newform-label'>New Video</label>
            <br/>
            <label>Title</label>
            <input
@@ -116,6 +116,7 @@ export default class Apis extends Component {
              onChange={this.handleNewFormChange}
              //value= {this.state.newVideo.title}
              />
+             <br/>
              <label>Description</label>
              <input  
                type="text"
@@ -123,6 +124,7 @@ export default class Apis extends Component {
                onChange={this.handleNewFormChange}
                //value= {this.state.newVideo.description}
                />
+               <br/>
                <label>Topic</label>
                <input  
                type="text"
@@ -130,6 +132,7 @@ export default class Apis extends Component {
                onChange={this.handleNewFormChange}
                //value= {this.state.newVideo.topic}
                />
+               <br/>
                <label>Link</label>
                <input  
                type="text"
@@ -137,7 +140,9 @@ export default class Apis extends Component {
                onChange={this.handleNewFormChange}
                //value= {this.state.newVideo.link}
               />
-              <input type="submit" value="Add New Video" />
+              <br/>
+              <br/>
+              <input className="new-video-button" type="submit" value="Add New Video" />
          </form>
       </section>
 

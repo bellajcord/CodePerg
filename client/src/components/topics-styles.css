@@ -51,3 +51,38 @@ hr {
 .indiv-video-container:hover {
     transform: scale(1.05);
 }
+
+.add-new-form {
+    border: 2px solid grey;
+    padding: 20px;
+    margin: 2em;
+    display: block;
+    text-align: center;
+
+}
+
+.newform-label {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-family: Montserrat;
+    width: 90vw;
+}
+
+label {
+    width: 80vw;
+}
+
+.new-video-button {
+    border-radius: 2px;
+    background-color: #343A40;
+    color:#fed136;
+    padding: 1em;
+}
+
+.new-video-button:hover {
+    border-radius: 2px;
+    background-color: #fed136;
+    color:#343A40;
+    padding: 1em;
+}
