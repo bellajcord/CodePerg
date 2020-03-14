@@ -2,7 +2,7 @@
 // will contain nav bar, and level selector buttons that route to subjects
 import React, { Component } from "react";
 import '../assets/bootstrap/css/bootstrap.min.css'
-import Background from '../assets/img/masthead.jpg'
+import '../assets/img/masthead.jpg'
 
 
 
@@ -42,7 +42,7 @@ export default class Home extends Component {
         <div className='container'>
           <div className='intro-text'>
             <div className='intro-lead-in'>
-                <h1>Welcome To Code Pergatory.</h1>
+                <span>Welcome To Code Pergatory.</span>
             </div>
             <div className="intro-heading text-uppercase">
             </div>
@@ -51,6 +51,7 @@ export default class Home extends Component {
       </header>
     
       <footer>
+      <section className="secondary-footer">
         <div className="container">
           <div className="row">
             <div className="col-md-4">
@@ -58,6 +59,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        </section>
       </footer>
 
 </div>
