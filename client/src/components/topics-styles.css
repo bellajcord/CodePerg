@@ -1,9 +1,10 @@
 .video-list {
-    width: 90vw;
+    width: 98vw;
     margin-top: 40px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
@@ -36,7 +37,7 @@ hr {
 .indiv-video-container {
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    background-color: #fed136;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 25px;
