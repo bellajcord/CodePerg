@@ -1,10 +1,10 @@
 const mongoose = require("./connection")
 
 const langVideoSchema = new mongoose.Schema ({
-    name: String,
+    title: String,
     link: String,
     description: String,
-    language: String,
+    topic: String,
 });
 
 const langVideoCollection = mongoose.model ("lang", langVideoSchema);

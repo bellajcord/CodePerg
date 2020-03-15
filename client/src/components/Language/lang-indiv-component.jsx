@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 //individual show page for each video will contiain edit and delete button
 import React from "react";
-// console.log(this.prop.apiVideo)
+
 export const IndivLangVideo = props => {
 
 
