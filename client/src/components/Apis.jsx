@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { Component } from "react";
 import axios from "axios";
 import { VideoList } from "./Api/api-list-component";
@@ -54,14 +55,19 @@ export default class Apis extends Component {
     this.componentDidMount();
   };
 
+  
+
   render() {
     const { apiVideos, searchField } = this.state;
     const filteredVideos = apiVideos.filter(apiVideo =>
       apiVideo.title.toLowerCase().includes(searchField.toLowerCase())
     );
 
+
     return (
       <div>
+        
+        
         <nav
           id="mainNav"
           className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark"
@@ -76,6 +82,7 @@ export default class Apis extends Component {
               data-toggle="collapse"
               type="button"
               data-toggle="collapse"
+              // eslint-disable-next-line jsx-a11y/aria-proptypes
               aria-controls="false"
               aria-label="Toggle navigation"
             >
@@ -113,7 +120,8 @@ export default class Apis extends Component {
           <br />
           <hr />
           <br />
-          <VideoList apiVideos={filteredVideos}></VideoList>
+          <VideoList apiVideos={filteredVideos}>
+          </VideoList>
           <section className="add-new-form">
             <form onSubmit={this.handleSubmit}>
               <label className="newform-label">New Video</label>

@@ -3,6 +3,10 @@
 import React from "react";
 // console.log(this.prop.apiVideo)
 export const IndivApiVideo = props => {
+
+
+  
+
   return (
     <div className="indiv-video-container">
       <iframe
@@ -17,6 +21,8 @@ export const IndivApiVideo = props => {
       <h2>{props.apiVideo.title} </h2>
       <p>{props.apiVideo.topic}</p>
       <p>{props.apiVideo.description}</p>
+
+     
     </div>
   );
 };
