@@ -17,16 +17,12 @@ Code Pergatory was created as an open source collection of coding youtube videos
 
 
 
-Wireframe:
-![alt text]()
-![alt text]()
+
 
 ERD:
-![alt text]()
-![alt text]()
+![alt text](erd.jpg)
+
 
 Final Product:
 ![alt text](codeperghome.png)
-![alt text]()
-![alt text]()
-![alt text]()
+
