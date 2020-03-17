@@ -20,9 +20,9 @@ Code Pergatory was created as an open source collection of coding youtube videos
 
 
 ERD:
-![alt text](erd.jpg)
+![alt text](./readmeimages/erd.jpg)
 
 
 Final Product:
-![alt text](codeperghome.png)
+![alt text](./readmeimages/codeperghome.png)
 
