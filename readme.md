@@ -1,31 +1,28 @@
-# mern-template-project
+# Code Perg
 
-# Setup A New Project From This Template
+### General Assembly SEI 26- Project 3
 
-If you are starting a new project do the following:
+* Trello board- https://trello.com/b/pyfHWflL/project-3
+  
+* Git hub- https://git.generalassemb.ly/bellajco/Priject3
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+* Link to deployed site- https://codeperg.herokuapp.com/
 
-# Setup A New Project Without This Template
+## Overview
+Code Pergatory was created as an open source collection of coding youtube videos so that the essentials are all and one place and easy to navigate. This app will cut down the amount of wasted hours someone spends on youtube trying to find the right videos to learn code. 
 
-If you want to start a project without using this template directory do the
-following:
+## Technology Used
+
+* Javascript, Mongoose, MongoDB, Express, React, Node.js
 
 
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
+
+
+
+ERD:
+![alt text](erd.jpg)
+
+
+Final Product:
+![alt text](codeperghome.png)
+
